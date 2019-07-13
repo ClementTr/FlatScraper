@@ -1,0 +1,4 @@
+boto3==1.9.146
+pandas==0.24.2
+PyVirtualDisplay==0.2.1
+selenium==3.141.0

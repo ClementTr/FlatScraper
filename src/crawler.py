@@ -168,8 +168,9 @@ def crawler(chrome_options):
     df_full["levels"] = df_full["levels"].apply(lambda x: clean_criterions(x, 'etg'))
     df_full["loans"] = df_full["loans"].apply(lambda x: clean_criterions(x, '€'))
     df_full["price_m²"] = df_full["prices"] / df_full["sizes"] * 1000
-    df_full.to_csv('df_' + date + '.csv', index=False)
+    #df_full.to_csv('df_' + date + '.csv', index=False)
     write_dataframe_to_csv_on_s3(df_full, 'data_' + date)
+    print('full df shape:', df_full.shape)
     print("DONE")
 
 
